@@ -1,0 +1,149 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  padding: 0 15px;
+}
+section {
+  margin-bottom: 80px;
+}
+header,
+footer {
+  padding: 50px 0;
+}
+h2 {
+  margin-bottom: 20px;
+}
+textarea {
+  width: 100%;
+}
+.cont {
+  margin-top: 40px;
+}
+#menu-btn {
+  position: fixed;
+  top: 50px;
+  right: 15px;
+  font-size: 40px;
+  font-weight: 900;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  line-height: 30px;
+  z-index: 100;
+}
+
+.accordeon {
+  margin-bottom: 20px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+nav button {
+  padding: 20px;
+  width: 400px;
+  font-size: 20px;
+  border: 2px solid pink;
+  border-radius: 20px;
+}
+nav button:hover {
+  background-color: #8aeed7;
+}
+
+footer {
+  margin-top: 500px;
+}
+
+/* Плавная прокрутка */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Раскрывающееся меню*/
+nav {
+  /* display: none; */
+  height: 0;
+  overflow-y: hidden;
+  /* transition: 1s; */
+}
+nav.open {
+  display: block;
+}
+nav.window {
+  max-height: 500px;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top:30px;
+  right: 0;
+  padding: 20px;
+  width: 100%;
+  height: fit-content;
+  z-index: 10;
+  background-color: #000;
+}
+
+#menu-btn.menuX {
+  position: fixed;
+  z-index: 20;
+}
+#menu-btn.menuX::after {
+  content: "X";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: red;
+  z-index: 30;
+}
+
+
+/* Аккордеон*/
+.accordeon-text {
+  display: none;
+}
+
+.accordeon-text.open {
+  display: block;
+}
+
+/* Табы */
+.cont {
+  display: none;
+}
+.cont.open {
+  display: block;
+}
+
+/* Word/Character Count */
+#textarea-btn {
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  background-color: yellow;
+  border-width: 1px;
+  border-radius: 10px;
+}
+#textarea-btn:hover {
+  color: red;
+  background-color: rgba(59, 239, 255, 0.411)
+}
